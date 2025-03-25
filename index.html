@@ -32,6 +32,23 @@
         .section {
             margin-bottom: 20px;
         }
+        .dropdown {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .dropdown-content {
+            display: none;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+        }
+        .dropdown-content a {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
     </style>
 </head>
 <body>
@@ -71,9 +88,25 @@
             You can see a small list of some of my achievements <a href="https://zas2008.github.io/roblox-achievements/" target="_blank">here</a>.
         </p>
     </div>
+    
+    <div class="dropdown">
+        <button onclick="toggleDropdown()">Cool Stuff</button>
+        <div id="dropdown-content" class="dropdown-content">
+            <a href="https://drive.google.com/file/d/1zW4QiMPEVcrHUuHtgfTFkDccNNf6aFed/view?usp=sharing" target="_blank">Undertale Music Discs MC Resource Pack</a>
+            <p>Changes Minecraft music discs to popular Undertale themes!</p>
+        </div>
+    </div>
+    
     <div class="section">
         <p>That's it for now.. this page is gonna keep expanding.. probably..</p>
     </div>
+    
+    <script>
+        function toggleDropdown() {
+            var content = document.getElementById("dropdown-content");
+            content.style.display = content.style.display === "block" ? "none" : "block";
+        }
+    </script>
 </body>
 </html>
 
