@@ -4,109 +4,279 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Who the hell am I?</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --gold: #FFD700;
+            --dark: #1A1A1A;
+            --light: #F5F5F5;
+            --accent: #E63946;
+            --card-bg: rgba(30, 30, 30, 0.8);
+        }
+        
         body {
-            margin: 20px;
-            font-family: Arial, sans-serif;
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--dark);
+            color: var(--light);
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
             line-height: 1.6;
-            background-color: #e0e0e0;
-            color: #333;
         }
-        h1 {
-            text-align: center;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        p {
-            max-width: 800px;
-            margin: 0 auto 10px;
-            text-align: justify;
-        }
-        a {
-            color: blue;
-            text-decoration: none;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
-        .dropdown {
+        
+        .container {
             max-width: 800px;
             margin: 0 auto;
-            text-align: center;
+            padding: 2rem;
         }
+        
+        header {
+            text-align: center;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            margin: 0;
+            background: linear-gradient(to right, var(--gold), #fff);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        .section {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            backdrop-filter: blur(5px);
+        }
+        
+        a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            position: relative;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        
+        .dropdown {
+            margin: 1.5rem 0;
+        }
+        
+        .dropdown-btn {
+            background: linear-gradient(135deg, #2b5876 0%, #4e4376 100%);
+            color: white;
+            border: none;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            margin: 0 auto;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .dropdown-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
+        
         .dropdown-content {
             display: none;
-            background-color: #f9f9f9;
-            padding: 10px;
-            border: 1px solid #ccc;
-            margin-top: 5px;
+            background: var(--card-bg);
+            border-radius: 8px;
+            padding: 1rem;
+            margin-top: 0.5rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            animation: fadeIn 0.3s ease;
         }
-        .dropdown-content a {
-            font-weight: bold;
+        
+        .dropdown-item {
+            padding: 0.8rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.2s ease;
+        }
+        
+        .dropdown-item:last-child {
+            border-bottom: none;
+        }
+        
+        .dropdown-item:hover {
+            background: rgba(255, 215, 0, 0.1);
+        }
+        
+        .dropdown-item a {
             display: block;
-            margin-bottom: 5px;
+            color: var(--gold);
+            font-weight: 600;
+        }
+        
+        .dropdown-item p {
+            margin: 0.5rem 0 0;
+            color: rgba(255,255,255,0.8);
+            font-size: 0.9rem;
+        }
+        
+        .social-item {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin-bottom: 0.8rem;
+        }
+        
+        .social-icon {
+            font-size: 1.2rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 2rem;
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 1rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 1rem;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Who the hell am I?</h1>
-    <div class="section">
-        <p>You probably know me by my real Greek name (which I won't be mentioning) or Zas. This page is in English.</p>
-    </div>
-    <div class="section">
-        <p>
-            I usually do programming in my free time. I've made a lot of games on sites like Roblox. 
-            You can view my profile and all my games <a href="https://www.roblox.com/users/1294034665/profile" target="_blank">here</a>.
-        </p>
-        <p>
-            I also do Python, C++, or anything I feel like learning (I've even modded a 3DS game once lol).
-        </p>
-        <p>
-            If you want any help, I am always free, but don't expect much. I still am learning too, obviously.
-        </p>
-    </div>
-    <div class="section">
-        <p>As for my socials, I have a couple. (no literally I have like 2)</p>
-        <p>Discord: zas08</p>
-        <p>
-            YouTube: <a href="https://www.youtube.com/@JustKille" target="_blank">here</a>
-        </p>
-    </div>
-    <div class="section">
-        <p>
-            I play a lot of Geometry Dash too. You can find my profile <a href="https://gdbrowser.com/u/ZA5" target="_blank">here</a>.
-        </p>
-        <p>
-            Steam acc <a href="https://steamcommunity.com/id/_zas" target="_blank">here</a>
-        </p>
-    </div>
-    <div class="section">
-        <p>
-            You can see a small list of some of my achievements <a href="https://zas2008.github.io/roblox-achievements/" target="_blank">here</a>.
-        </p>
-    </div>
-    
-    <div class="dropdown">
-        <button onclick="toggleDropdown()">Cool Stuff ↓</button>
-        <div id="dropdown-content" class="dropdown-content">
-            <a href="https://drive.google.com/file/d/1zW4QiMPEVcrHUuHtgfTFkDccNNf6aFed/view?usp=sharing" target="_blank">Undertale Music Discs MC Resource Pack</a>
-            <p>Changes Minecraft music discs to popular Undertale themes!</p>
+    <div class="container">
+        <header>
+            <h1>Who the hell am I?</h1>
+        </header>
+        
+        <div class="section">
+            <p>You probably know me by my real Greek name (which I won't be mentioning) or Zas. This page is in English.</p>
+        </div>
+        
+        <div class="section">
+            <p>
+                I usually do programming in my free time. I've made a lot of games on sites like Roblox. 
+                You can view my profile and all my games <a href="https://www.roblox.com/users/1294034665/profile" target="_blank">here</a>.
+            </p>
+            <p>
+                I also do Python, C++, or anything I feel like learning (I've even modded a 3DS game once lol).
+            </p>
+            <p>
+                If you want any help, I am always free, but don't expect much. I still am learning too, obviously.
+            </p>
+        </div>
+        
+        <div class="section">
+            <h3>Socials</h3>
+            <div class="social-item">
+                <span class="social-icon">🎮</span>
+                <span>Discord: zas08</span>
+            </div>
+            <div class="social-item">
+                <span class="social-icon">📺</span>
+                <span>YouTube: <a href="https://www.youtube.com/@JustKille" target="_blank">@JustKille</a></span>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h3>Gaming Profiles</h3>
+            <div class="social-item">
+                <span class="social-icon">🌟</span>
+                <span>Geometry Dash: <a href="https://gdbrowser.com/u/ZA5" target="_blank">ZA5</a></span>
+            </div>
+            <div class="social-item">
+                <span class="social-icon">🎮</span>
+                <span>Steam: <a href="https://steamcommunity.com/id/_zas" target="_blank">_zas</a></span>
+            </div>
+        </div>
+        
+        <div class="section">
+            <p>
+                You can see a small list of some of my achievements <a href="https://zas2008.github.io/roblox-achievements/" target="_blank">here</a>.
+            </p>
+        </div>
+        
+        <div class="dropdown">
+            <button class="dropdown-btn" onclick="toggleDropdown()">
+                <span>Cool Stuff</span>
+                <span id="dropdown-arrow">↓</span>
+            </button>
+            <div id="dropdown-content" class="dropdown-content">
+                <div class="dropdown-item">
+                    <a href="https://drive.google.com/file/d/1zW4QiMPEVcrHUuHtgfTFkDccNNf6aFed/view?usp=sharing" target="_blank">Undertale Music Discs MC Resource Pack</a>
+                    <p>Changes Minecraft music discs to popular Undertale themes!</p>
+                </div>
+                <div class="dropdown-item">
+                    <a href="https://zas2008.github.io/croc-leaderboard/" target="_blank">Croc Leaderboard</a>
+                    <p>The pinnacle of aura achievement - only 3 people in history have reached this level</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <p>That's it for now.. this page is gonna keep expanding.. probably..</p>
         </div>
     </div>
     
-    <div class="section">
-        <p>That's it for now.. this page is gonna keep expanding.. probably..</p>
-    </div>
+    <footer>
+        © 2023 Zas | Constantly under construction
+    </footer>
     
     <script>
         function toggleDropdown() {
-            var content = document.getElementById("dropdown-content");
-            content.style.display = content.style.display === "block" ? "none" : "block";
+            const content = document.getElementById("dropdown-content");
+            const arrow = document.getElementById("dropdown-arrow");
+            
+            if (content.style.display === "block") {
+                content.style.display = "none";
+                arrow.textContent = "↓";
+            } else {
+                content.style.display = "block";
+                arrow.textContent = "↑";
+            }
         }
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(event) {
+            const dropdown = document.querySelector('.dropdown');
+            const isClickInside = dropdown.contains(event.target);
+            
+            if (!isClickInside) {
+                document.getElementById("dropdown-content").style.display = "none";
+                document.getElementById("dropdown-arrow").textContent = "↓";
+            }
+        });
     </script>
 </body>
 </html>
-
