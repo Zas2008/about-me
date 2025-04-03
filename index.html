@@ -12,6 +12,7 @@
             --light: #F5F5F5;
             --accent: #E63946;
             --card-bg: rgba(30, 30, 30, 0.8);
+            --blue: #4285F4;
         }
         
         body {
@@ -28,6 +29,45 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 2rem;
+        }
+        
+        .game-banner {
+            background: linear-gradient(135deg, rgba(66, 133, 244, 0.2) 0%, rgba(66, 133, 244, 0.4) 100%);
+            border: 1px solid var(--blue);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(66, 133, 244, 0.3);
+            transition: all 0.3s ease;
+            animation: glow 2s infinite alternate;
+        }
+        
+        .game-banner:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(66, 133, 244, 0.5);
+        }
+        
+        .game-banner a {
+            color: var(--blue);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.5rem;
+            text-decoration: none;
+            font-weight: 700;
+        }
+        
+        .game-banner p {
+            margin: 0.5rem 0 0;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 10px rgba(66, 133, 244, 0.3);
+            }
+            to {
+                box-shadow: 0 0 20px rgba(66, 133, 244, 0.6);
+            }
         }
         
         header {
@@ -176,6 +216,11 @@
 </head>
 <body>
     <div class="container">
+        <div class="game-banner">
+            <a href="https://zas2008.github.io/drimclicker/" target="_blank">New Game: Drimclicker</a>
+            <p>Cool clicker game I made in a few hours. It's pretty basic. Play now!</p>
+        </div>
+        
         <header>
             <h1>Who the hell am I?</h1>
         </header>
@@ -250,7 +295,7 @@
     </div>
     
     <footer>
-        © 2023 Zas | Constantly under construction
+        goat
     </footer>
     
     <script>
@@ -267,7 +312,6 @@
             }
         }
         
-        // Close dropdown when clicking outside
         document.addEventListener('click', function(event) {
             const dropdown = document.querySelector('.dropdown');
             const isClickInside = dropdown.contains(event.target);
