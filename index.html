@@ -13,6 +13,7 @@
             --accent: #E63946;
             --card-bg: rgba(30, 30, 30, 0.8);
             --blue: #4285F4;
+            --green: #28A745; /* New Green Color */
         }
         
         body {
@@ -32,24 +33,24 @@
         }
         
         .game-banner {
-            background: linear-gradient(135deg, rgba(66, 133, 244, 0.2) 0%, rgba(66, 133, 244, 0.4) 100%);
-            border: 1px solid var(--blue);
+            background: linear-gradient(135deg, rgba(40, 167, 69, 0.2) 0%, rgba(40, 167, 69, 0.4) 100%); /* Changed to green */
+            border: 1px solid var(--green); /* Changed to green */
             border-radius: 12px;
             padding: 1rem;
             margin-bottom: 2rem;
             text-align: center;
-            box-shadow: 0 0 15px rgba(66, 133, 244, 0.3);
+            box-shadow: 0 0 15px rgba(40, 167, 69, 0.3); /* Changed to green */
             transition: all 0.3s ease;
             animation: glow 2s infinite alternate;
         }
         
         .game-banner:hover {
             transform: translateY(-2px);
-            box-shadow: 0 0 20px rgba(66, 133, 244, 0.5);
+            box-shadow: 0 0 20px rgba(40, 167, 69, 0.5); /* Changed to green */
         }
         
         .game-banner a {
-            color: var(--blue);
+            color: var(--green); /* Changed to green */
             font-family: 'Montserrat', sans-serif;
             font-size: 1.5rem;
             text-decoration: none;
@@ -63,10 +64,10 @@
         
         @keyframes glow {
             from {
-                box-shadow: 0 0 10px rgba(66, 133, 244, 0.3);
+                box-shadow: 0 0 10px rgba(40, 167, 69, 0.3); /* Changed to green */
             }
             to {
-                box-shadow: 0 0 20px rgba(66, 133, 244, 0.6);
+                box-shadow: 0 0 20px rgba(40, 167, 69, 0.6); /* Changed to green */
             }
         }
         
@@ -217,8 +218,8 @@
 <body>
     <div class="container">
         <div class="game-banner">
-            <a href="https://zas2008.github.io/drimclicker/" target="_blank">New Game: Drimclicker</a>
-            <p>Cool clicker game I made in a few hours. It's pretty basic. Play now!</p>
+            <a href="https://zas2008.github.io/best-roguelike/" target="_blank">New Game: Best Roguelike</a> <!-- Updated Link and Text -->
+            <p>Cool roguelike game I made in a couple hours, endless! Try to get a high score</p> <!-- Updated Description -->
         </div>
         
         <header>
@@ -293,6 +294,11 @@
                 <div class="dropdown-item">
                     <a href="https://zas2008.github.io/REAL-parkour-list/" target="_blank">Parkour List</a>
                     <p>"Hardest Parkour Jumps" concept I made in class with my friend when i was bored, heavily inspired by pointercrate.</p>
+                 </div>
+                 <!-- Added the new game to the cool stuff dropdown -->
+                 <div class="dropdown-item">
+                    <a href="https://zas2008.github.io/best-roguelike/" target="_blank">Best Roguelike</a>
+                    <p>Cool roguelike game I made in a couple hours, endless! Try to get a high score</p>
                  </div>
             </div>
         </div>
